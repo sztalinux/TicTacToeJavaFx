@@ -30,7 +30,7 @@ public class SignSelectionController {
             public void handle(ActionEvent event){
 //                Jesli dobrze zaznaczony znak:
                 System.out.println("Przejscie do nowego okna Game");
-//                else blad
+//                else nic sie nie dzieje po kliknieciu
             }
 
         };
@@ -38,7 +38,7 @@ public class SignSelectionController {
         EventHandler<ActionEvent> handlerMenu = new EventHandler<ActionEvent>(){
 
             public void handle(ActionEvent event){
-                System.out.println("Wyjscie z aplikacji");
+                System.out.println("Powrot do menu");
             }
 
         };
