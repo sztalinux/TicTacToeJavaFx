@@ -1,9 +1,15 @@
 package sample.controller;
 
+import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
-import javafx.fxml.FXML;
-import javafx.scene.control.Button;
+import javafx.stage.Stage;
+import sample.Main;
 
 public class SignSelectionController {
 
@@ -12,6 +18,9 @@ public class SignSelectionController {
     @FXML
     private Button menuButton;
 
+    public SignSelectionController(){
+        System.out.println("duaaa");
+    }
 
     @FXML
     void initialize(){
@@ -19,7 +28,9 @@ public class SignSelectionController {
         EventHandler<ActionEvent> handlerGraj = new EventHandler<ActionEvent>(){
 
             public void handle(ActionEvent event){
-                System.out.println("Rozpoczecie gry");
+//                Jesli dobrze zaznaczony znak:
+                System.out.println("Przejscie do nowego okna Game");
+//                else blad
             }
 
         };
@@ -27,7 +38,7 @@ public class SignSelectionController {
         EventHandler<ActionEvent> handlerMenu = new EventHandler<ActionEvent>(){
 
             public void handle(ActionEvent event){
-                System.out.println("Powrot do menu");
+                System.out.println("Wyjscie z aplikacji");
             }
 
         };
@@ -35,4 +46,5 @@ public class SignSelectionController {
         grajButton.addEventHandler(ActionEvent.ACTION, handlerGraj);
         menuButton.addEventHandler(ActionEvent.ACTION, handlerMenu);
 
+    }
 }
